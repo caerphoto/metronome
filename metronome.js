@@ -7,8 +7,8 @@
   // Initial property values will be reflected in UI at startup.
   var state = {
     on: false,
-    bpm: 60,
-    beats: 1,
+    bpm: 80,
+    beats: 2,
     accent: true,
     timeLimit: {
       active: true,
