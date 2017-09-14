@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Metronome &middot; andyf.me</title>
+    <link rel="stylesheet" href="metronome.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  </head>
+  <body>
+    <h1>Metronome</h1>
+    <div class="control-group">
+      <label for="bpm-num">Beats per minute</label>
+      <input id="bpm-slider" type="range" min="15" max="300" data-prop="bpm">
+      <input id="bpm-num" type="number" min="15" max="300" data-prop="bpm">
+    </div>
+
+    <div class="control-group">
+      <label for="beats-num">Beats per bar</label>
+      <input id="beats-num" type="number" min="1" max="16" data-prop="beats">
+    </div>
+
+    <div class="group-box">
+      <div class="control-group">
+        <label for="time-limit-active">Time limit</label>
+        <input type="checkbox" id="time-limit-active" data-prop="timeLimit.active">
+      </div>
+
+      <div class="control-group">
+        <label for="time-limit-minutes">Min<span class="wide">utes</span></label>
+        <input id="time-limit-minutes" type="number" min="0" max="60" data-prop="timeLimit.minutes">
+
+        <label for="time-limit-seconds">sec<span class="wide">onds</span></label>
+        <input id="time-limit-seconds" type="number" min="0" max="59"data-prop="timeLimit.seconds">
+      </div>
+
+      <div class="control-group">
+        <label for="time-limit-intro-bar">Intro bar</label>
+        <input id="time-limit-intro-bar" type="checkbox"data-prop="timeLimit.introBar">
+      </div>
+
+      <progress id="timer-progress" min="0" value="0">
+    </div>
+
+    <div class="control-group">
+      <button id="start-button" type="button">Start</button>
+      <button id="stop-button" type="button">Stop</button>
+    </div>
+
+    <audio id="audio-beat" src="beat.wav" preload></audio>
+    <audio id="audio-accent" src="accent.wav" preload></audio>
+
+    <div id="debug"></div>
+  </body>
+
+  <script src="metronome.js"></script>
+</html>

@@ -1,0 +1,142 @@
+html {
+  margin: 0;
+  padding: 1em;
+  background-color: #333;
+  color: #eee;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 35em;
+  margin: 0 auto;
+  border: 1px solid #555;
+  padding: 1em 3em;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: #3a3a3a;
+}
+
+.control-group {
+  margin-bottom: 1em;
+}
+
+.group-box {
+  border: 1px solid #000;
+  padding: 1em 1em 0;
+  margin: 0 -1em;
+  background-color: #444;
+  margin-bottom: 1em;
+}
+
+input, button {
+  font: inherit;
+}
+
+input {
+  padding: 0.2em 0.5em;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+input[type="number"] {
+  appearance: none;
+  border: 1px solid #888;
+  background-color: #222;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  color: #eee;
+}
+
+input[type="range"] {
+  width: 15em;
+}
+
+input + label {
+  padding-left: 1em;
+}
+
+button {
+  border-width: 2px;
+  border-style: solid;
+  background-color: #aaa;
+  padding: 0.5em;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+progress {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+#start-button {
+  display: block;
+  border-color: #6a6;
+}
+#stop-button {
+  display: none;
+  border-color: #c66;
+}
+
+.on #start-button {
+  display: none;
+}
+.on #stop-button {
+  display: block;
+}
+
+#debug {
+  display: none;
+  white-space: pre;
+  font-family: monospace;
+}
+
+body.debug #debug {
+  display: block;
+}
+
+@media screen and (max-width: 640px) {
+  html {
+    padding: 0;
+    background-color: #3a3a3a;
+  }
+
+  body {
+    border: none;
+    background: none;
+    padding: 1em;
+    max-width: none;
+    box-shadow: none;
+  }
+
+  h1 {
+    margin: 0 0 0.5rem;
+  }
+
+  .control-group {
+    padding-bottom: 0.5em;
+  }
+
+  input[type="range"] {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  input[type="range"] + input {
+    margin: 0;
+  }
+
+  .group-box {
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+
+  .wide {
+    display: none;
+  }
+}
